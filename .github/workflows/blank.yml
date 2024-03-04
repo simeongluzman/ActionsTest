@@ -16,8 +16,6 @@ jobs:
           echo "Hello, World! $(date)" >> hello_world_timestamps.txt
       - name: Commit and push if changed
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
           git add hello_world_timestamps.txt
           git commit -m "Add Hello World with Timestamp" || exit 0  # Exit gracefully if no changes
           git push
