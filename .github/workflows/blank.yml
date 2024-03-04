@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Save Hello World and Timestamp
         run: |
-          echo "Hello, World! $(date)" > hello_world_timestamps.txt
+          echo "Hello, World! $(date)" >> hello_world_timestamps.txt
       - name: Commit and push if changed
         run: |
           git config --local user.email "action@github.com"
